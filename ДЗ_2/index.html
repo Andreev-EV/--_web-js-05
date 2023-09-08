@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ_2</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('.myCheckbox').click(function() {
+        var checkedCount = $('.myCheckbox:checked').length;
+        if (checkedCount >= 2) {
+          $('.myCheckbox').prop('disabled', true);
+        }
+      });
+    });
+</script>
+</head>
+<body>
+    <h2>2. Дано 5 чекбоксов. Сделайте так, чтобы после того, как пользователь отметил два из них, все чекбоксы заблокировались</h2>
+    <div>
+        <input id = "myCheckbox1" type="checkbox" class="myCheckbox">
+        <label for="myCheckbox1">1-й чекбокс</label>
+    </div>
+    <div>
+        <input id = "myCheckbox2" type="checkbox" class="myCheckbox">
+        <label for="myCheckbox2">2-й чекбокс</label>
+    </div>
+        <div>
+        <input id = "myCheckbox3" type="checkbox" class="myCheckbox">
+        <label for="myCheckbox3">3-й чекбокс</label>
+    </div>
+        <div>
+        <input id = "myCheckbox4" type="checkbox" class="myCheckbox">
+        <label for="myCheckbox4">4-й чекбокс</label>
+    </div>
+        <div>
+        <input id = "myCheckbox5" type="checkbox" class="myCheckbox">
+        <label for="myCheckbox5">5-й чекбокс</label>
+    </div>
+</body>
+</html>

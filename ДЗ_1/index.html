@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>ДЗ_1</title>
+    <style>
+      #myElement {
+        cursor: pointer;
+        width: 150px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: brown;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#myElement").mousedown(function () {
+          $(this).animate(
+            {
+              width: "+=50px",
+              height: "+=50px",
+            },
+            1000
+          );
+        });
+
+        $("#myElement").mouseup(function () {
+          $(this).animate(
+            {
+              width: "-=50px",
+              height: "-=50px",
+            },
+            1000
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>1. Анимируйте элемент, изменив его высоту и ширину</h2>
+    <div id="myElement">Нажми на меня</div>
+  </body>
+</html>

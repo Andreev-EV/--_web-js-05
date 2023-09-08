@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ_3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#checkAll').click(function(){
+                if ($(this).is(':checked')){
+                    $('#controls input:checkbox').prop('checked', true);
+                } else {
+                    $('#controls input:checkbox').prop('checked', false);
+                }
+            });
+        });
+    </script>
+    </head>
+    <body>
+        <h2>3. Сделайте так, чтобы все отмеченные чекбоксы сменили свое состояние на неотмеченное и наоборот.</h2>
+        <div>
+            <input id = "checkAll" type="checkbox">
+            <label for="checkAll">Отметить все</label>
+        </div>
+        <p id="controls">
+            <label for="myCheckbox1"><input id = "myCheckbox1" type="checkbox">1-й чекбокс</label>
+            <label for="myCheckbox2"><input id = "myCheckbox2" type="checkbox">2-й чекбокс</label>
+            <label for="myCheckbox3"><input id = "myCheckbox3" type="checkbox">3-й чекбокс</label>
+            <label for="myCheckbox4"><input id = "myCheckbox4" type="checkbox">4-й чекбокс</label>
+            <label for="myCheckbox4"><input id = "myCheckbox5" type="checkbox">5-й чекбокс</label>
+        </p>
+        
+    </body>
+    </html>

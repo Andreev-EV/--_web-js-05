@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ДЗ_4</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            $('#mySelect').change(function() {
+                var selectedValue = $(this).val();
+                $('input[name="myRadio"][value="' + selectedValue + '"]').prop('checked', true);
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <select id="mySelect">
+        <option value="1">Селект 1</option>
+        <option value="2">Селект 2</option>
+        <option value="3">Селект 3</option>
+        </select>
+        
+        <input type="radio" name="myRadio" value="1" checked>
+        <input type="radio" name="myRadio" value="2">
+        <input type="radio" name="myRadio" value="3">
+    </body>
+</html>
